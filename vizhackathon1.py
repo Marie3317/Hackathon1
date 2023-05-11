@@ -4,6 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import datetime
+import plotly.express as px
 
 # Chargement en local en pikle
 df = pd.read_csv("df.csv")
