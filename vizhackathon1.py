@@ -15,7 +15,7 @@ df.astype({"year" : "int"})
 # Configuration de la page
 st.set_page_config(
     page_title="Reconver'Son",
-    layout="wide",
+    #layout="wide",
     page_icon="🎙️")
 
 # titre
