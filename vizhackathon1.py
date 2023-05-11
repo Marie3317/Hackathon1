@@ -22,11 +22,12 @@ st.set_page_config(
 # titre
 st.title("Exploration du dataset.")
 col1, col2, col3 = st.columns(3)
-                col1.metric("Nombre de lignes : XX")
-                col2.metric("Nombre de colonne : XX")
-                col3.metric("Nombre d'artistes : XX")
-
-
+with col1 :
+    st.metric(label="Nombre de lignes : XX", value = df)
+with col2 :
+    st.metric(label="Nombre de colonne : XX", value = df)
+with col3 :
+    st.metric(label="Nombre d'artistes : XX", value = df)
 
 
 # Top 5 Genres
