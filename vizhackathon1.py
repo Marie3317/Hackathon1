@@ -20,7 +20,7 @@ st.set_page_config(
     page_icon="🎙️")
 
 # titre
-st.title('Présentation du dataset')
+st.title("<h1 style='text-align: center; color: grey;'>Présentation du dataset</h1>", unsafe_allow_html=True)
 
 # Top 5 Genres
 genres5 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_name", ascending = False)[:5].iloc[:,:2]
