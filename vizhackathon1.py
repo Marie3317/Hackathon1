@@ -26,6 +26,8 @@ genres5 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_n
 list_genres5 = ["Alternative", "Dance", "Folk", "Blues", "Hip-Hop"]
 df_top5 = df[df["genre"].isin(list_genres5)]
 # Visualisation
+st.header('Top 5 des genres')
+fig, ax = plt.subplots()
 fig2 = px.histogram(df_top5, x = "genre", text_auto=True,
                    template="xgridoff",
             color_discrete_sequence= px.colors.sequential.Burg)
@@ -33,7 +35,8 @@ fig2 = px.histogram(df_top5, x = "genre", text_auto=True,
 fig2.update_yaxes(title_text = "Total")
 fig2.update_xaxes(title_text = "Genres")
 fig2.update_layout(title = {"text" : "Top 5 des genres les plus représentés", "x":0.5})
-fig2.show()
+st.pyplot(fig2)
+
 
 # TEMPO
 genres10 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_name", ascending = False)[:10].iloc[:,:2]
