@@ -20,7 +20,7 @@ st.set_page_config(
     page_icon="🎙️")
 
 # titre
-#st.title("Présentation du dataset")
+#st.title("Exploratio du dataset.")
 #with open("style.css") as f:
  #   st.markdown(f"<style>{f.read()}<style>, unsafe_allow_html=True)
 st.title("Présentation du dataset")
