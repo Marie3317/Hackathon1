@@ -48,7 +48,7 @@ fig3 = px.bar(df1,
               template="xgridoff",
              labels={"tempo": "Tempo", "popularity" : "Popularité", "genre" : "Genres"})
 fig3.update_layout(title = {"text" : "Popularité en fonction du tempo par genre", "x":0.5})
-fig3.show(renderer="iframe")
+fig3.show()
 
 # TOP Artistes
 artist = df.groupby(["artist_name"]).count().reset_index().sort_values(by = "genre", ascending = False)[:10].iloc[:,:2]
