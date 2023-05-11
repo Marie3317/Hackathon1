@@ -8,6 +8,7 @@ import plotly.express as px
 
 # Chargement en local en pikle
 df = pd.read_csv("df.csv")
+
 # Mise en forme du df
 df['genre'].replace("Children’s Music", "Children's Music", inplace=True)
 df.astype({"year" : "int"})
@@ -28,7 +29,7 @@ df_top5 = df[df["genre"].isin(list_genres5)]
 # Visualisation
 st.header('Top 5 des genres')
 fig2, ax = plt.subplots()
-px.histogram(df_top5, x = "genre", text_auto=True,
+fig2 = px.histogram(df_top5, x = "genre", text_auto=True,
                    template="xgridoff",
             color_discrete_sequence= px.colors.sequential.Burg)
 
