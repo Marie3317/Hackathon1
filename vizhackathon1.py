@@ -27,8 +27,8 @@ list_genres5 = ["Alternative", "Dance", "Folk", "Blues", "Hip-Hop"]
 df_top5 = df[df["genre"].isin(list_genres5)]
 # Visualisation
 st.header('Top 5 des genres')
-fig, ax = plt.subplots()
-fig2 = px.histogram(df_top5, x = "genre", text_auto=True,
+fig2, ax = plt.subplots()
+px.histogram(df_top5, x = "genre", text_auto=True,
                    template="xgridoff",
             color_discrete_sequence= px.colors.sequential.Burg)
 
