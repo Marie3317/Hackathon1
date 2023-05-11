@@ -35,7 +35,7 @@ px.histogram(df_top5, x = "genre", text_auto=True,
 #fig2.update_yaxes(title_text = "Total")
 #fig2.update_xaxes(title_text = "Genres")
 #fig2.update_layout(title = {"text" : "Top 5 des genres les plus représentés", "x":0.5})
-st.pyplot_chart(fig2)
+st.plotly_chart(fig2)
 
 
 # TEMPO
