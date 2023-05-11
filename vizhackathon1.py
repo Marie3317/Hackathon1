@@ -38,7 +38,7 @@ fig2.show()
 # TEMPO
 genres10 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_name", ascending = False)[:10].iloc[:,:2]
 list_genres10 = ["Alternative", "Dance", "Folk", "Blues", "Hip-Hop", "Country", "Soundtrack", "Soundtrack", "Electronic", "Classical", "Anime"]
-df_top10 = df[df["genre"].isin(list_genres)]
+df_top10 = df[df["genre"].isin(list_genres10)]
 df1 = df_top10.groupby(["genre"]).count().reset_index()
 # Visualisation
 fig3 = px.bar(df1,
