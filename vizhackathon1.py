@@ -22,7 +22,8 @@ st.set_page_config(
 # titre
 #st.title("Présentation du dataset", width = 150)
 with open("style.css") as f:
-    st.markdown('<style>{Présentation du dataset}</style>'.format(f.read()), unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: grey;'>Big headline</h1>", unsafe_allow_html=True)
+
 
 
 
