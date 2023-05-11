@@ -21,8 +21,6 @@ st.set_page_config(
 
 # titre
 st.title("Exploration du dataset.")
-with open("style.css") as f:
-    st.markdown(f"<style>{f.read()}<style>, unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
                 col1.metric("Nombre de lignes : XX")
                 col2.metric("Nombre de colonne : XX")
