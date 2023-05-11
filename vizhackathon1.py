@@ -46,7 +46,7 @@ df1 = df_top10.groupby(["genre"]).count().reset_index()
 # Visualisation
 st.header('Popularité en fonction du tempo par genre')
 fig3, ax = plt.subplots()
-fig3 = px.bar(df1,
+px.bar(df1,
              x='tempo',
              y='popularity', color = "genre",
             barmode='stack',
@@ -60,7 +60,7 @@ artist = df.groupby(["artist_name"]).count().reset_index().sort_values(by = "gen
 # Visualisation
 st.header('Top artistes')
 fig5, ax = plt.subplots()
-fig5 = px.bar(artist,
+px.bar(artist,
              x='artist_name',
              y='genre', color = "genre",
             barmode='stack',
@@ -74,7 +74,7 @@ st.pyplot(fig5)
 # Visualisation
 st.header('Top artistes')
 fig7, ax = plt.subplots()
-fig7 = px.histogram(df, x="year", y="danceability",
+px.histogram(df, x="year", y="danceability",
                     template="xgridoff",
                     color_discrete_sequence= px.colors.sequential.Burg,
                    #labels = {"year" : "Années", "danceability" : "Danceability"}
@@ -90,7 +90,7 @@ st.pyplot(fig7)
 genres2 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_name", ascending = False)[:].iloc[:,:2]
 st.header('Genres les plus représentés')
 fig9, ax = plt.subplots()
-fig9 = px.histogram(genres2, x="genre", y ="artist_name", text_auto=True,
+px.histogram(genres2, x="genre", y ="artist_name", text_auto=True,
                    template="xgridoff",
                     color_discrete_sequence= px.colors.sequential.Burg,)
 
