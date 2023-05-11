@@ -53,7 +53,7 @@ px.bar(df1,
               template="xgridoff",
              labels={"tempo": "Tempo", "popularity" : "Popularité", "genre" : "Genres"})
 #fig3.update_layout(title = {"text" : "Popularité en fonction du tempo par genre", "x":0.5})
-st.pyplot_chart(fig3)
+st.plotly_chart(fig3)
 
 # TOP Artistes
 artist = df.groupby(["artist_name"]).count().reset_index().sort_values(by = "genre", ascending = False)[:10].iloc[:,:2]
@@ -68,7 +68,7 @@ px.bar(artist,
              labels={"artist_name": "Nom de l'artiste", "genre" : "Total", "genre" : "Total"}
              )
 #fig5.update_layout(title = {"text" : "Artistes les plus représentés", "x":0.5})
-st.pyplot_chart(fig5)
+st.plotly_chart(fig5)
 
 # TOP Danceability
 # Visualisation
@@ -83,7 +83,7 @@ px.histogram(df, x="year", y="danceability",
 #fig7.update_yaxes(title_text = "Années")
 #fig7.update_xaxes(title_text = "Danceability")
 #fig7.update_layout(title_text = "Danceability en fonction des années", title_x=0.5)
-st.pyplot_chart(fig7)
+st.plotly_chart(fig7)
 
 
 # Grenres les plus représentés
@@ -97,4 +97,4 @@ px.histogram(genres2, x="genre", y ="artist_name", text_auto=True,
 #fig9.update_yaxes(title_text = "Total")
 #fig9.update_xaxes(title_text = "Genres")
 #fig9.update_layout(title_text = "Nombre de genres les plus représentés", title_x=0.5)
-st.pyplot_chart(fig9)
+st.plotly_chart(fig9)
