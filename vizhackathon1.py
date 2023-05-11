@@ -20,10 +20,10 @@ st.set_page_config(
     page_icon="🎙️")
 
 # titre
-#st.title("Présentation du dataset", width = 150)
+#st.title("Présentation du dataset")
 with open("style.css") as f:
-    st.markdown("<h1 style='text-align: center; color: grey;'>Big headline</h1>", unsafe_allow_html=True)
-
+    st.markdown(f"<style>{f.read()}<style>, unsafe_allow_html=True)
+st.title(""Présentation du dataset")
 
 
 
