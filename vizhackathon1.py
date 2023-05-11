@@ -23,7 +23,7 @@ st.set_page_config(
 #st.title("Présentation du dataset")
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}<style>, unsafe_allow_html=True)
-st.title(""Présentation du dataset")
+st.title("Présentation du dataset")
 
 
 
