@@ -20,7 +20,7 @@ st.set_page_config(
     page_icon="🎙️")
 
 # titre
-st.title("Exploration du dataset.")
+st.title("Exploration du dataset")
 
 # Top 5 Genres
 genres5 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_name", ascending = False)[:5].iloc[:,:2]
@@ -81,7 +81,6 @@ st.plotly_chart(fig7)
 
 # Grenres les plus représentés
 genres2 = df.groupby(["genre"]).count().reset_index().sort_values(by = "artist_name", ascending = False)[:].iloc[:,:2]
-st.header('Genres les plus représentés')
 fig9 = px.histogram(genres2, x="genre", y ="artist_name", text_auto=True,
                    template="xgridoff",
                     color_discrete_sequence= px.colors.sequential.Burg,)
