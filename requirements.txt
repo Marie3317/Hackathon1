@@ -6,7 +6,7 @@ plotly.express
 spotipy
 scikit-learn
 sklearn
-json
+jsonlib
 numpy
 sqlite3
 time
