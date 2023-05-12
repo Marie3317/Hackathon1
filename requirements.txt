@@ -6,3 +6,9 @@ plotly.express
 spotipy
 scikit-learn
 sklearn
+json
+numpy
+sqlite3
+time
+random
+pillow
