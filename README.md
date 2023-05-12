@@ -1,5 +1,5 @@
 # Hackathon1
-
+Du 11 au 12 mai 2023
 ## Problématique :
 La Wild Code School souhaite lancer sa propre radio pour mettre de l’ambiance sur ses différents campus.
 Elle voudrait pouvoir avoir des recommandations de musiques et créer des playlists adaptées à son auditoire.
