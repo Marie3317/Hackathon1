@@ -13,7 +13,7 @@ Mise en place d’un algorithme de recommandations à partir d’un titre saisi 
 
 Possibilité d’affiner les résultats depuis certains critères (genre, durée du morceau, tempo,etc…)
 
-## Liens stramlit
+## Liens streamlit
 https://marie3317-hackathon1-vizhackathon1-sstlmr.streamlit.app/
 
 
